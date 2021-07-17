@@ -1,0 +1,36 @@
+mkdir gitAssign
+git init
+notepad add.py
+notepad sub.py
+notepad mul.py
+git checkout -b Dev
+git add add.py
+git commit -m "initial commit of add.py on Dev branch"
+git checkout -b Test
+git add -A
+git commit -m "initial commit of mul and sub on Test branch"
+git checkout Dev
+notepad add.py
+git diff
+git status
+git checkout -b master	(I needed to create a master branch because master was not showing in list after command "git branch"...after some research i got to know master branch will not list under it until I commit something in it, so creating it and will merge everything it)
+
+(As I changed some text in add.py it is untracked but i am neither pushing it to staging area nor committing it as you didn't asked for it... If you wanted me to stage and commit then commands would be:- git add add.py , git commit -m "changed some text in add.py")
+
+git merge Dev	(It shows "Already up to date")
+git merege Test	(It is updating files)\
+
+(In GitHub created a Repo named gitAssign)
+
+git remote add origin https://github.com/ShivamGuptaaa/gitAssign.git
+git push -u origin master
+
+(Another folder for cloning)
+mkdir clonedGitAssign
+cd clonedGitAssign
+git init
+git clone https://github.com/ShivamGuptaaa/gitAssign.git
+cd gitAssign
+notepad Solution.txt
+
+(Now copying this all content in Solution.txt, then will stage, commit and then finally push it to GitHub and share the link)
